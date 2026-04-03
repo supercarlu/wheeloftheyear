@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spring · The Wheel of Our Year</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    /* Spring colour overrides */
+    :root {
+      --season-color: #4A5C3A;
+      --season-light: #7A9A62;
+      --season-pale: #EEF3E8;
+    }
+
+    .season-hero { border-bottom: 1px solid var(--border); margin-bottom: 0; }
+    .season-hero .season-label { color: var(--moss); }
+    .season-hero h1 { color: var(--ink); }
+    .season-hero h1 em { color: var(--moss); font-style: italic; }
+
+    /* Botanical background accent */
+    .hero-botanical {
+      position: absolute;
+      right: -20px;
+      top: 60px;
+      width: 320px;
+      opacity: 0.08;
+      pointer-events: none;
+    }
+
+    /* Season intro band */
+    .season-intro-band {
+      background: var(--parchment);
+      border-bottom: 1px solid var(--border);
+      padding: 2.5rem 3rem;
+    }
+
+    .season-intro-band-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .band-item {}
+
+    .band-item-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--moss);
+      margin-bottom: 0.4rem;
+      display: block;
+    }
+
+    .band-item-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      font-style: italic;
+      color: var(--ink-soft);
+      line-height: 1.6;
+    }
+
+    /* Celebrations list page-specific tweaks */
+    .celebration-entry.upcoming .cel-title {
+      color: var(--moss);
+    }
+
+    .celebration-entry .cel-date-day {
+      color: var(--moss);
+      opacity: 0.6;
+    }
+
+    /* Section divider with botanical */
+    .section-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 3rem 0;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .section-divider-line {
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .section-divider-ornament {
+      margin: 0 1.5rem;
+      color: var(--gold);
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 768px) {
+      .season-intro-band { padding: 2rem 1.5rem; }
+      .season-intro-band-inner { grid-template-columns: 1fr; gap: 1rem; }
+      .hero-botanical { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="../index.html" class="nav-logo">The Wheel of <span>Our Year</span></a>
+    <ul class="nav-links">
+      <li><a href="../spring/index.html">Spring</a></li>
+      <li><a href="../summer/index.html">Summer</a></li>
+      <li><a href="../autumn/index.html">Autumn</a></li>
+      <li><a href="../winter/index.html">Winter</a></li>
+    </ul>
+  </nav>
+
+  <!-- Season hero -->
+  <div class="season-hero fade-up fade-up-1">
+    <div class="breadcrumb" style="margin-bottom: 2rem;">
+      <a href="../index.html">Home</a>
+      <span>→</span>
+      <span style="color: var(--moss);">Spring</span>
+    </div>
+
+    <span class="season-label">Season I of IV</span>
+    <h1>Vår — <em>Spring</em></h1>
+    <p class="season-desc">The return of light. The ground remembers warmth. Each week something new breaks through — and we mark every turning with fire, food, and flowers.</p>
+    <p class="season-months-row">March · April · May</p>
+
+    <!-- Botanical decoration: large spring leaves -->
+    <svg class="hero-botanical" viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="150" cy="250" rx="60" ry="110" fill="#4A5C3A" transform="rotate(-15 150 250)"/>
+      <ellipse cx="200" cy="200" rx="45" ry="85" fill="#4A5C3A" transform="rotate(20 200 200)"/>
+      <ellipse cx="95" cy="280" rx="38" ry="70" fill="#4A5C3A" transform="rotate(-30 95 280)"/>
+      <ellipse cx="230" cy="300" rx="30" ry="55" fill="#4A5C3A" transform="rotate(35 230 300)"/>
+      <!-- Stems -->
+      <line x1="150" y1="380" x2="150" y2="180" stroke="#4A5C3A" stroke-width="3"/>
+      <line x1="200" y1="360" x2="165" y2="240" stroke="#4A5C3A" stroke-width="2"/>
+      <line x1="95" y1="370" x2="140" y2="260" stroke="#4A5C3A" stroke-width="2"/>
+      <!-- Small buds -->
+      <ellipse cx="148" cy="175" rx="6" ry="10" fill="#4A5C3A"/>
+      <ellipse cx="165" cy="155" rx="5" ry="8" fill="#4A5C3A" transform="rotate(20 165 155)"/>
+      <ellipse cx="135" cy="165" rx="4" ry="7" fill="#4A5C3A" transform="rotate(-20 135 165)"/>
+    </svg>
+  </div>
+
+  <!-- Info band -->
+  <div class="season-intro-band fade-up fade-up-2">
+    <div class="season-intro-band-inner">
+      <div class="band-item">
+        <span class="band-item-label">In the kitchen</span>
+        <p class="band-item-text">Forced rhubarb, new asparagus, spring lamb, fresh herbs, radishes, the first strawberries</p>
+      </div>
+      <div class="band-item">
+        <span class="band-item-label">For the home</span>
+        <p class="band-item-text">Birch branches, pussy willow, daffodils, tulips, lilac, wildflowers and flower crowns</p>
+      </div>
+      <div class="band-item">
+        <span class="band-item-label">The mood</span>
+        <p class="band-item-text">Awakening. The days lengthen visibly now. Open windows, light meals, fire at night</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Celebrations list -->
+  <div class="celebrations-list">
+
+    <div class="section-divider fade-up fade-up-2">
+      <div class="section-divider-line"></div>
+      <span class="section-divider-ornament">✦</span>
+      <div class="section-divider-line"></div>
+    </div>
+
+    <!-- Spring Equinox -->
+    <a href="equinox.html" class="celebration-entry fade-up fade-up-3">
+      <div class="cel-date-col">
+        <span class="cel-date-day">20</span>
+        <span class="cel-date-month">Mar</span>
+      </div>
+      <div class="cel-content">
+        <span class="cel-origin">Pan-European · Astronomical</span>
+        <h2 class="cel-title">Spring Equinox — Vårjevndøgn</h2>
+        <p class="cel-description">The exact moment when light and dark are equal — and from here the light wins. Still cold in Oslo, but something in the air has shifted. We mark the turning with lamb, rhubarb cake, and by eating dinner in natural light.</p>
+        <div class="cel-tags">
+          <span class="cel-tag">Dinner</span>
+          <span class="cel-tag">Baking</span>
+          <span class="cel-tag">Ritual</span>
+          <span class="cel-tag">Seasonal produce</span>
+        </div>
+      </div>
+      <span class="cel-arrow">→</span>
+    </a>
+
+    <!-- Walpurgis -->
+    <a href="walpurgis.html" class="celebration-entry fade-up fade-up-3">
+      <div class="cel-date-col">
+        <span class="cel-date-day">30</span>
+        <span class="cel-date-month">Apr</span>
+      </div>
+      <div class="cel-content">
+        <span class="cel-origin">Norse · Germanic</span>
+        <h2 class="cel-title">Walpurgis Night — Valborg</h2>
+        <p class="cel-description">The night winter is declared over. Fire, noise, and the insistence that spring has arrived — regardless of the weather. Bonfires have been lit on this night across Scandinavia for longer than anyone can remember.</p>
+        <div class="cel-tags">
+          <span class="cel-tag">Fire</span>
+          <span class="cel-tag">Outdoor dinner</span>
+          <span class="cel-tag">Ritual</span>
+          <span class="cel-tag">Flower crowns</span>
+        </div>
+      </div>
+      <span class="cel-arrow">→</span>
+    </a>
+
+    <!-- Easter -->
+    <a href="easter.html" class="celebration-entry fade-up fade-up-4">
+      <div class="cel-date-col">
+        <span class="cel-date-day" style="font-size: 1.4rem; padding-top: 0.6rem;">Påske</span>
+        <span class="cel-date-month">Apr (varies)</span>
+      </div>
+      <div class="cel-content">
+        <span class="cel-origin">Spanish · Norse · Pan-European</span>
+        <h2 class="cel-title">Easter Weekend — Påske</h2>
+        <p class="cel-description">Four days with a different character each. A gathering walk, a simple fish dinner, a making day with natural egg dyes and torrijas, and a slow-roasted lamb on Sunday. The Spanish torrijas are our household tradition.</p>
+        <div class="cel-tags">
+          <span class="cel-tag">Torrijas</span>
+          <span class="cel-tag">Natural egg dyes</span>
+          <span class="cel-tag">Lamb</span>
+          <span class="cel-tag">Påskeris</span>
+        </div>
+      </div>
+      <span class="cel-arrow">→</span>
+    </a>
+
+    <!-- Syttende Mai -->
+    <a href="syttende-mai.html" class="celebration-entry fade-up fade-up-4">
+      <div class="cel-date-col">
+        <span class="cel-date-day">17</span>
+        <span class="cel-date-month">May</span>
+      </div>
+      <div class="cel-content">
+        <span class="cel-origin">Norwegian</span>
+        <h2 class="cel-title">Syttende Mai — Constitution Day</h2>
+        <p class="cel-description">Norway's great national celebration. The parade, the bunad, the flags, the ice cream. At home: a table of smørbrød, a bløtkake made the evening before, and the lilac in full bloom in the windows.</p>
+        <div class="cel-tags">
+          <span class="cel-tag">Bløtkake</span>
+          <span class="cel-tag">Smørbrød</span>
+          <span class="cel-tag">Bunad</span>
+          <span class="cel-tag">Lilac</span>
+        </div>
+      </div>
+      <span class="cel-arrow">→</span>
+    </a>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <span class="footer-name">The Wheel of Our Year</span>
+    <span class="footer-note">Norse & Iberian traditions · Oslo</span>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Wheel of Our Year</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Home-page specific */
+    .home-intro {
+      max-width: 640px;
+      margin: 0 auto 4rem;
+      text-align: center;
+      padding: 0 3rem;
+    }
+
+    .home-intro p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-style: italic;
+      font-weight: 300;
+      color: var(--ink-muted);
+      line-height: 1.8;
+    }
+
+    /* Wheel SVG illustration */
+    .wheel-container {
+      display: flex;
+      justify-content: center;
+      margin: 0 auto 3rem;
+      padding: 0 3rem;
+    }
+
+    .wheel-svg {
+      width: 220px;
+      height: 220px;
+      animation: slowRotate 120s linear infinite;
+    }
+
+    @keyframes slowRotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    /* Season card SVG botanical accents */
+    .season-card .card-botanical {
+      position: absolute;
+      bottom: -10px;
+      right: -10px;
+      width: 140px;
+      height: 140px;
+      opacity: 0.07;
+      transition: opacity 0.4s;
+    }
+
+    .season-card:hover .card-botanical { opacity: 0.13; }
+
+    .seasons-section-label {
+      text-align: center;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 2rem;
+      padding: 0 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html" class="nav-logo">The Wheel of <span>Our Year</span></a>
+    <ul class="nav-links">
+      <li><a href="spring/index.html">Spring</a></li>
+      <li><a href="summer/index.html">Summer</a></li>
+      <li><a href="autumn/index.html">Autumn</a></li>
+      <li><a href="winter/index.html">Winter</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <header class="page-header">
+    <span class="eyebrow fade-up fade-up-1">Norse · Iberian · Seasonal</span>
+    <h1 class="fade-up fade-up-2">The Wheel of<br><em>Our Year</em></h1>
+    <p class="subtitle fade-up fade-up-3">A calendar of celebrations, traditions, and recipes for our home — following the turning of the seasons.</p>
+  </header>
+
+  <!-- Rotating wheel ornament -->
+  <div class="wheel-container fade-up fade-up-3">
+    <svg class="wheel-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <!-- Outer ring -->
+      <circle cx="100" cy="100" r="92" fill="none" stroke="#B8924A" stroke-width="0.8" stroke-dasharray="4 6"/>
+      <!-- Inner ring -->
+      <circle cx="100" cy="100" r="72" fill="none" stroke="#B8924A" stroke-width="0.4" opacity="0.5"/>
+      <!-- Spokes -->
+      <line x1="100" y1="8" x2="100" y2="192" stroke="#B8924A" stroke-width="0.4" opacity="0.4"/>
+      <line x1="8" y1="100" x2="192" y2="100" stroke="#B8924A" stroke-width="0.4" opacity="0.4"/>
+      <line x1="29" y1="29" x2="171" y2="171" stroke="#B8924A" stroke-width="0.4" opacity="0.4"/>
+      <line x1="171" y1="29" x2="29" y2="171" stroke="#B8924A" stroke-width="0.4" opacity="0.4"/>
+      <!-- Season markers -->
+      <circle cx="100" cy="8" r="3" fill="#B8924A"/>
+      <circle cx="192" cy="100" r="3" fill="#B8924A"/>
+      <circle cx="100" cy="192" r="3" fill="#B8924A"/>
+      <circle cx="8" cy="100" r="3" fill="#B8924A"/>
+      <!-- Quarter labels -->
+      <text x="100" y="36" text-anchor="middle" font-family="Jost, sans-serif" font-size="6" fill="#B8924A" letter-spacing="2" opacity="0.8">SPRING</text>
+      <text x="164" y="104" text-anchor="middle" font-family="Jost, sans-serif" font-size="6" fill="#B8924A" letter-spacing="2" opacity="0.8">SUMMER</text>
+      <text x="100" y="178" text-anchor="middle" font-family="Jost, sans-serif" font-size="6" fill="#B8924A" letter-spacing="2" opacity="0.8">AUTUMN</text>
+      <text x="36" y="104" text-anchor="middle" font-family="Jost, sans-serif" font-size="6" fill="#B8924A" letter-spacing="2" opacity="0.8">WINTER</text>
+      <!-- Centre -->
+      <circle cx="100" cy="100" r="6" fill="none" stroke="#B8924A" stroke-width="1"/>
+      <circle cx="100" cy="100" r="2" fill="#B8924A"/>
+      <!-- Leaf motifs at cardinal points (tiny) -->
+      <ellipse cx="100" cy="20" rx="3" ry="6" fill="#B8924A" opacity="0.5" transform="rotate(0 100 20)"/>
+      <ellipse cx="180" cy="100" rx="3" ry="6" fill="#B8924A" opacity="0.5" transform="rotate(90 180 100)"/>
+      <ellipse cx="100" cy="180" rx="3" ry="6" fill="#B8924A" opacity="0.5" transform="rotate(0 100 180)"/>
+      <ellipse cx="20" cy="100" rx="3" ry="6" fill="#B8924A" opacity="0.5" transform="rotate(90 20 100)"/>
+    </svg>
+  </div>
+
+  <!-- Intro text -->
+  <div class="home-intro fade-up fade-up-4">
+    <p>Every year the wheel turns — through light and dark, fire and snow, harvest and rest. These are the celebrations we keep in our home: rooted in Norse and Iberian tradition, shaped by the seasons of Norway, and made our own.</p>
+  </div>
+
+  <!-- Next celebration banner -->
+  <div class="next-celebration fade-up fade-up-4" id="next-banner"></div>
+
+  <!-- Season cards -->
+  <p class="seasons-section-label fade-up fade-up-5">Explore the year</p>
+  <div class="seasons-grid fade-up fade-up-5">
+
+    <!-- Spring -->
+    <a href="spring/index.html" class="season-card spring" id="card-spring">
+      <span class="season-number">I</span>
+      <span class="season-tag">Spring</span>
+      <h2>Vår</h2>
+      <p class="season-months">March · April · May</p>
+      <ul class="celebration-list">
+        <li>Spring Equinox · Vårjevndøgn</li>
+        <li>Walpurgis Night · Valborg</li>
+        <li>Easter · Torrijas</li>
+        <li>Syttende Mai</li>
+      </ul>
+      <div class="card-arrow">Enter the season →</div>
+      <!-- Botanical: leaves -->
+      <svg class="card-botanical" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="100" cy="120" rx="40" ry="70" fill="#4A5C3A" transform="rotate(-20 100 120)"/>
+        <ellipse cx="130" cy="100" rx="30" ry="55" fill="#4A5C3A" transform="rotate(15 130 100)"/>
+        <ellipse cx="70" cy="140" rx="25" ry="45" fill="#4A5C3A" transform="rotate(-35 70 140)"/>
+        <line x1="100" y1="190" x2="100" y2="80" stroke="#4A5C3A" stroke-width="2"/>
+        <line x1="130" y1="155" x2="90" y2="130" stroke="#4A5C3A" stroke-width="1.5"/>
+        <line x1="70" y1="165" x2="95" y2="145" stroke="#4A5C3A" stroke-width="1.5"/>
+      </svg>
+    </a>
+
+    <!-- Summer -->
+    <a href="summer/index.html" class="season-card summer" id="card-summer">
+      <span class="season-number">II</span>
+      <span class="season-tag">Summer</span>
+      <h2>Sommer</h2>
+      <p class="season-months">June · July · August</p>
+      <ul class="celebration-list">
+        <li>Midsummer · Sankthans</li>
+        <li>La Noche de San Juan</li>
+        <li>The Free Months</li>
+      </ul>
+      <div class="card-arrow">Enter the season →</div>
+      <!-- Botanical: sun / flower -->
+      <svg class="card-botanical" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="100" cy="100" r="30" fill="#B8924A"/>
+        <ellipse cx="100" cy="45" rx="12" ry="22" fill="#B8924A"/>
+        <ellipse cx="100" cy="155" rx="12" ry="22" fill="#B8924A"/>
+        <ellipse cx="45" cy="100" rx="12" ry="22" fill="#B8924A" transform="rotate(90 45 100)"/>
+        <ellipse cx="155" cy="100" rx="12" ry="22" fill="#B8924A" transform="rotate(90 155 100)"/>
+        <ellipse cx="58" cy="58" rx="10" ry="20" fill="#B8924A" transform="rotate(45 58 58)"/>
+        <ellipse cx="142" cy="58" rx="10" ry="20" fill="#B8924A" transform="rotate(-45 142 58)"/>
+        <ellipse cx="58" cy="142" rx="10" ry="20" fill="#B8924A" transform="rotate(-45 58 142)"/>
+        <ellipse cx="142" cy="142" rx="10" ry="20" fill="#B8924A" transform="rotate(45 142 142)"/>
+      </svg>
+    </a>
+
+    <!-- Autumn -->
+    <a href="autumn/index.html" class="season-card autumn" id="card-autumn">
+      <span class="season-number">III</span>
+      <span class="season-tag">Autumn</span>
+      <h2>Høst</h2>
+      <p class="season-months">September · October · November</p>
+      <ul class="celebration-list">
+        <li>Autumn Equinox · Haustblót</li>
+        <li>Samhain · Día de Muertos</li>
+        <li>Friendsgiving</li>
+      </ul>
+      <div class="card-arrow">Enter the season →</div>
+      <!-- Botanical: oak leaf -->
+      <svg class="card-botanical" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <path d="M100 180 C100 180 60 150 55 120 C50 100 65 85 60 70 C55 55 40 50 45 35 C50 20 70 25 80 35 C90 45 85 55 90 65 C95 75 100 70 100 70 C100 70 105 75 110 65 C115 55 110 45 120 35 C130 25 150 20 155 35 C160 50 145 55 140 70 C135 85 150 100 145 120 C140 150 100 180 100 180Z" fill="#8B4A2A"/>
+        <line x1="100" y1="180" x2="100" y2="70" stroke="#8B4A2A" stroke-width="2"/>
+        <line x1="100" y1="120" x2="75" y2="100" stroke="#8B4A2A" stroke-width="1.5"/>
+        <line x1="100" y1="120" x2="125" y2="100" stroke="#8B4A2A" stroke-width="1.5"/>
+        <line x1="100" y1="100" x2="80" y2="85" stroke="#8B4A2A" stroke-width="1"/>
+        <line x1="100" y1="100" x2="120" y2="85" stroke="#8B4A2A" stroke-width="1"/>
+      </svg>
+    </a>
+
+    <!-- Winter -->
+    <a href="winter/index.html" class="season-card winter" id="card-winter">
+      <span class="season-number">IV</span>
+      <span class="season-tag">Winter</span>
+      <h2>Vinter</h2>
+      <p class="season-months">December · January · February</p>
+      <ul class="celebration-list">
+        <li>Jul · Yule · Solstice</li>
+        <li>Trettende dag jul · Roscón</li>
+        <li>Dísablót · Fastelavn</li>
+      </ul>
+      <div class="card-arrow">Enter the season →</div>
+      <!-- Botanical: snowflake / pine -->
+      <svg class="card-botanical" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <line x1="100" y1="20" x2="100" y2="180" stroke="#1A2433" stroke-width="2.5"/>
+        <line x1="20" y1="100" x2="180" y2="100" stroke="#1A2433" stroke-width="2.5"/>
+        <line x1="36" y1="36" x2="164" y2="164" stroke="#1A2433" stroke-width="2.5"/>
+        <line x1="164" y1="36" x2="36" y2="164" stroke="#1A2433" stroke-width="2.5"/>
+        <line x1="100" y1="50" x2="85" y2="65" stroke="#1A2433" stroke-width="1.5"/>
+        <line x1="100" y1="50" x2="115" y2="65" stroke="#1A2433" stroke-width="1.5"/>
+        <line x1="100" y1="150" x2="85" y2="135" stroke="#1A2433" stroke-width="1.5"/>
+        <line x1="100" y1="150" x2="115" y2="135" stroke="#1A2433" stroke-width="1.5"/>
+        <line x1="50" y1="100" x2="65" y2="85" stroke="#1A2433" stroke-width="1.5"/>
+        <line x1="50" y1="100" x2="65" y2="115" stroke="#1A2433" stroke-width="1.5"/>
+        <line x1="150" y1="100" x2="135" y2="85" stroke="#1A2433" stroke-width="1.5"/>
+        <line x1="150" y1="100" x2="135" y2="115" stroke="#1A2433" stroke-width="1.5"/>
+        <circle cx="100" cy="100" r="8" fill="none" stroke="#1A2433" stroke-width="1.5"/>
+        <circle cx="100" cy="100" r="3" fill="#1A2433"/>
+      </svg>
+    </a>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <span class="footer-name">The Wheel of Our Year</span>
+    <span class="footer-note">Made with intention · Norse & Iberian traditions · Oslo</span>
+  </footer>
+
+  <script>
+    // ── Detect current season and next celebration ──
+    const today = new Date();
+    const month = today.getMonth() + 1; // 1–12
+    const day = today.getDate();
+
+    // Assign current season
+    let currentSeason = '';
+    if ((month === 3 && day >= 1) || month === 4 || month === 5) currentSeason = 'spring';
+    else if (month === 6 || month === 7 || month === 8) currentSeason = 'summer';
+    else if (month === 9 || month === 10 || month === 11) currentSeason = 'autumn';
+    else currentSeason = 'winter';
+
+    // Highlight current season card
+    const currentCard = document.getElementById('card-' + currentSeason);
+    if (currentCard) {
+      currentCard.classList.add('current-season');
+      const badge = document.createElement('span');
+      badge.className = 'current-badge';
+      badge.textContent = 'We are here';
+      currentCard.prepend(badge);
+    }
+
+    // Next celebrations in order (month, day, name, date label, page)
+    const celebrations = [
+      { month: 3, day: 20, name: 'Spring Equinox', sub: 'Vårjevndøgn', date: 'March 19–21', page: 'spring/equinox.html' },
+      { month: 4, day: 30, name: 'Walpurgis Night', sub: 'Valborg', date: 'April 30th', page: 'spring/walpurgis.html' },
+      { month: 4, day: 10, name: 'Easter Weekend', sub: 'Påske · Torrijas', date: 'April (varies)', page: 'spring/easter.html' },
+      { month: 5, day: 17, name: 'Syttende Mai', sub: 'Constitution Day', date: 'May 17th', page: 'spring/syttende-mai.html' },
+      { month: 6, day: 23, name: 'Midsummer Eve', sub: 'Sankthans · San Juan', date: 'June 23rd', page: 'summer/midsummer.html' },
+      { month: 8, day: 1,  name: 'First Harvest', sub: 'Freyfaxi', date: 'August 1st', page: 'summer/harvest.html' },
+      { month: 9, day: 22, name: 'Autumn Equinox', sub: 'Haustblót', date: 'September 21–23', page: 'autumn/equinox.html' },
+      { month: 10, day: 31, name: 'Samhain · Día de Muertos', sub: 'The ancestors\' weekend', date: 'October 31 – November 2', page: 'autumn/samhain.html' },
+      { month: 11, day: 15, name: 'Friendsgiving', sub: 'Mid-November', date: 'Mid-November', page: 'autumn/friendsgiving.html' },
+      { month: 12, day: 21, name: 'Jul · Yule', sub: 'Winter Solstice', date: 'December 21 & 24', page: 'winter/yule.html' },
+      { month: 1,  day: 12, name: 'Midwinter', sub: 'The Long Rest', date: 'Early January', page: 'winter/midwinter.html' },
+      { month: 1,  day: 6,  name: 'Trettende dag jul', sub: 'Roscón de Reyes', date: 'January 6th', page: 'winter/trettende.html' },
+      { month: 2,  day: 2,  name: 'Dísablót · Fastelavn', sub: 'The Last Dark', date: 'February 1–2', page: 'winter/disablot.html' },
+    ];
+
+    function daysUntil(month, day) {
+      const target = new Date(today.getFullYear(), month - 1, day);
+      if (target < today) target.setFullYear(today.getFullYear() + 1);
+      const diff = Math.ceil((target - today) / (1000 * 60 * 60 * 24));
+      return diff;
+    }
+
+    // Find nearest upcoming
+    let next = null;
+    let minDays = Infinity;
+    for (const c of celebrations) {
+      const d = daysUntil(c.month, c.day);
+      if (d < minDays) { minDays = d; next = c; }
+    }
+
+    if (next) {
+      const banner = document.getElementById('next-banner');
+      banner.innerHTML = `
+        <div class="next-celebration-inner">
+          <div>
+            <span class="next-label">Next celebration</span>
+            <div class="next-name">${next.name}</div>
+            <div class="next-date">${next.sub} · ${next.date}</div>
+            <a href="${next.page}" class="next-link">See traditions & recipes →</a>
+          </div>
+          <div class="next-days">
+            <span class="days-number">${minDays}</span>
+            <span class="days-label">days away</span>
+          </div>
+        </div>
+      `;
+    }
+  </script>
+
+</body>
+</html>
