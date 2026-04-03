@@ -11,6 +11,7 @@
   --gold-light: #D4AF72;
   --gold-pale: #F0E0B8;
   --moss: #4A5C3A;
+  --pastel-green: #B7E585;
   --rust: #8B4A2A;
   --midnight: #1A2433;
   --border: rgba(184, 146, 74, 0.25);
@@ -192,7 +193,7 @@ nav {
 
 .season-card:hover::before { opacity: 1; }
 
-.season-card.spring::before { background: rgba(74, 92, 58, 0.04); }
+.season-card.spring::before { background: rgba(213, 240, 183, 0.04); }
 .season-card.summer::before { background: rgba(184, 146, 74, 0.06); }
 .season-card.autumn::before { background: rgba(139, 74, 42, 0.06); }
 .season-card.winter::before { background: rgba(26, 36, 51, 0.06); }
@@ -310,7 +311,7 @@ nav {
 }
 
 .next-celebration-inner {
-  background: var(--ink);
+  background: var(--gold);
   color: var(--cream);
   padding: 2.5rem 3.5rem;
   display: flex;
